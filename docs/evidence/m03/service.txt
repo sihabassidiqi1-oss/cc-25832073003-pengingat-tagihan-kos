@@ -1,0 +1,19 @@
+● cc-m03.service - PTI 2802 M03 Flask Application
+     Loaded: loaded (/etc/systemd/system/cc-m03.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-10-30 13:48:06 WIB; 11min ago
+   Main PID: 564 (gunicorn)
+      Tasks: 3 (limit: 628)
+     Memory: 35.3M (peak: 35.5M)
+        CPU: 434ms
+     CGroup: /system.slice/cc-m03.service
+             ├─564 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+             └─830 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+
+Oct 30 13:48:08 cc-m03-25832073003 gunicorn[564]: [2026-10-30 13:48:08 +0700] [564] [INFO] Starting gunicorn 26.2.0
+Oct 30 13:48:08 cc-m03-25832073003 gunicorn[564]: [2026-10-30 13:48:08 +0700] [564] [INFO] Listening at: http://127.0.0.1:8000 (564)
+Oct 30 13:48:08 cc-m03-25832073003 gunicorn[564]: [2026-10-30 13:48:08 +0700] [564] [INFO] Using worker: gthread
+Oct 30 13:48:08 cc-m03-25832073003 gunicorn[830]: [2026-10-30 13:48:08 +0700] [830] [INFO] Booting worker with pid: 830
+Oct 30 13:48:09 cc-m03-25832073003 gunicorn[564]: [2026-10-30 13:48:09 +0700] [564] [ERROR] Control server error: [Errno 13] Permission denied: '/home/cloudstudent'
+Oct 30 13:52:51 cc-m03-25832073003 gunicorn[830]: 127.0.0.1 - - [30/Oct/2026:13:52:51 +0700] "GET / HTTP/1.1" 200 782 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+Oct 30 13:56:27 cc-m03-25832073003 gunicorn[830]: 127.0.0.1 - - [30/Oct/2026:13:56:27 +0700] "GET /health HTTP/1.1" 200 91 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+Warning: journal has been rotated since unit was started and some journal files were not opened due to insufficient permissions, output may be incomplete.
