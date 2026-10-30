@@ -4,7 +4,7 @@ Cloud Computing — PTI 2802
 Pertemuan 3 — Project Inception
 
 ## Author
-Sihab Assidiqi / 25832073003 / Kelas: [belum diisi]
+Sihab Assidiqi / 25832073003 / Kelas: PTI 2A 2025
 
 ## Problem
 [ASUMSI, perlu verifikasi baseline 14 hari] Pencatatan keuangan harian dan tugas/deadline kuliah masih tersebar dan tidak konsisten, sehingga pengeluaran sulit dilacak dan deadline berisiko terlewat. Belum ada satu sumber data pribadi yang tahan lama, dapat diakses dari berbagai perangkat, dan dapat diekspor.
