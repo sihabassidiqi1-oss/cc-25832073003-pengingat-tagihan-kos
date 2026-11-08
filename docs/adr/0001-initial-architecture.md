@@ -23,7 +23,7 @@ Diimplementasikan pada AWS EC2 t3.micro (CPU options CoreCount=1, ThreadsPerCore
 4. PHP-FPM
 
 ## Rationale
-- Flask: framework ringan yang cukup untuk aplikasi pencatat satu pengguna dan mudah dikembangkan menjadi CRUD dengan SQLite pada M05.
+- Flask: framework ringan yang cukup untuk aplikasi pengelola tagihan kos dan mudah dikembangkan menjadi CRUD dengan SQLite pada M05.
 - Gunicorn 1 worker, 2 thread: menjaga headroom CPU dan RAM (1 vCPU, 909 MiB terbaca) untuk SSH, systemd, Caddy, dan operasi paket. Pengukuran 2026-10-26: layanan memakai sekitar 29.6 MB RAM.
 - systemd: aplikasi hidup otomatis saat boot (enabled) dan dijalankan ulang bila gagal (Restart=on-failure).
 - Caddy: reverse proxy dengan konfigurasi singkat dan siap HTTPS otomatis ketika domain tersedia pada M04.

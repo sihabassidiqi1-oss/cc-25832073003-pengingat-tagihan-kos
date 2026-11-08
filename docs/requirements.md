@@ -1,18 +1,18 @@
 # Requirements
 
 ## Problem Statement
-[ASUMSI, perlu verifikasi baseline 14 hari] Pencatatan keuangan harian dan tugas/deadline kuliah penyusun masih tersebar dan tidak konsisten, sehingga pengeluaran sulit dilacak dan deadline berisiko terlewat. Belum ada satu sumber data pribadi yang tahan lama, dapat diakses dari berbagai perangkat, dan dapat diekspor.
+[ASUMSI, perlu verifikasi baseline 14 hari] Banyak pemilik kos masih mencatat dan menagih tagihan bulanan secara manual lewat buku atau chat, sehingga tagihan terlewat dan pencatatan tidak rapi. Belum ada satu sumber data yang rapi, tahan lama, dan membantu mengingatkan penyewa saat jatuh tempo.
 
 ## Target Users
-- Pengguna utama: Sihab Assidiqi (pemilik, 1 pengguna aktif).
-- Pengguna tambahan opsional (orang terpercaya) hanya setelah gate privasi lulus.
+- Pengguna utama: pemilik kos (login, mengelola kamar, penyewa, dan tagihan bulanan).
+- Penyewa kos: menerima pengingat jatuh tempo lewat WhatsApp atau email; tanpa akun pada MVP. Data tiap pemilik terpisah.
 
 ## Functional Requirements
-- FR-01 Pengguna terautentikasi dapat menambah transaksi (jenis, nominal, kategori, tanggal, catatan) dalam <=30 detik. [Must; direncanakan M03/M05; belum diimplementasikan pada baseline M03]
-- FR-02 Sistem menyimpan data transaksi secara persisten di SQLite dan tetap utuh setelah restart/reboot. [Must; direncanakan M05; belum diimplementasikan]
+- FR-01 Pemilik kos terautentikasi dapat menambah, mengubah, dan menghapus data kamar dan penyewa. [Must; direncanakan M05; belum diimplementasikan pada baseline M03]
+- FR-02 Sistem menyimpan data kamar, penyewa, dan tagihan secara persisten di SQLite, terpisah per pemilik, dan tetap utuh setelah restart/reboot. [Must; direncanakan M05; belum diimplementasikan]
 - FR-03 Sistem menyediakan GET /health untuk status proses. [Must; terimplementasi dan teruji pada M03]
-- FR-04 Pengguna terautentikasi dapat membaca, mengubah, menghapus transaksi dan tugas, serta mengekspor CSV; akses anonim ditolak. [Should; direncanakan setelah M05; belum diimplementasikan]
-- FR-05 Input tidak valid (nominal kosong/negatif, tanggal salah) ditolak dengan pesan jelas tanpa membocorkan detail internal. [Should; direncanakan setelah M05; belum diimplementasikan]
+- FR-04 Sistem membuat tagihan bulanan dan daftar pengingat jatuh tempo secara otomatis; pemilik dapat menandai status bayar, mengirim pengingat ke penyewa lewat tombol WhatsApp satu klik atau email, dan menerima notifikasi harian lewat email; akses anonim ditolak. [Should; direncanakan setelah M05; belum diimplementasikan]
+- FR-05 Input tidak valid (nominal kosong/negatif, tanggal jatuh tempo salah, nomor WhatsApp tidak valid) ditolak dengan pesan jelas tanpa membocorkan detail internal. [Should; direncanakan setelah M05; belum diimplementasikan]
 
 ## Non-Functional Requirements
 - NFR-01 backend loopback-only

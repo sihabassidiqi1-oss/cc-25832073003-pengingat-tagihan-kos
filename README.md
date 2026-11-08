@@ -1,4 +1,4 @@
-# CatatKu Cloud
+# Pengingat Tagihan Kos
 
 Cloud Computing — PTI 2802  
 Pertemuan 3 — Project Inception
@@ -7,10 +7,10 @@ Pertemuan 3 — Project Inception
 Sihab Assidiqi / 25832073003 / Kelas: PTI 2A 2025
 
 ## Problem
-[ASUMSI, perlu verifikasi baseline 14 hari] Pencatatan keuangan harian dan tugas/deadline kuliah masih tersebar dan tidak konsisten, sehingga pengeluaran sulit dilacak dan deadline berisiko terlewat. Belum ada satu sumber data pribadi yang tahan lama, dapat diakses dari berbagai perangkat, dan dapat diekspor.
+[ASUMSI, perlu verifikasi baseline 14 hari] Banyak pemilik kos masih mencatat dan menagih tagihan bulanan secara manual lewat buku atau chat, sehingga tagihan terlewat dan pencatatan tidak rapi. Belum ada satu sumber data yang rapi, tahan lama, dan membantu mengingatkan penyewa saat jatuh tempo.
 
 ## Target Users
-Pemilik proyek (satu pengguna aktif); pengguna tambahan opsional hanya setelah gate privasi lulus.
+Pemilik kos sebagai pengguna utama (login, mengelola kamar, penyewa, dan tagihan); penyewa menerima pengingat lewat WhatsApp atau email tanpa akun pada MVP. Data tiap pemilik terpisah.
 
 ## Features M03
 - baseline application
